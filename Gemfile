@@ -39,7 +39,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-ujs',  '1.1.0'
 end
 
-gem 'autoprefixer-rails',   '~> 6.1.0'
+gem 'autoprefixer-rails',   '~> 6.5.1'
 gem 'materialize-sass',     '~> 0.97.5'
 gem 'sass-rails',           '~> 5.0'
 gem 'uglifier',             '~> 2.7.2'
@@ -52,6 +52,7 @@ group :development do
   gem 'pry-remote',         '~> 0.1.8'
   gem 'pry-stack_explorer', '~> 0.4.9'
   gem 'quiet_assets',       '~> 1.1.0'
+  gem 'letter_opener',      '~> 1.4.1'
 end
 
 group :production do

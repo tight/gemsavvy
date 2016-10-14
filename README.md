@@ -19,21 +19,30 @@ http://gemsavvy.tips/
 You need to generate a Github access token.
 You'll need this token to access to repos stats on Github.
 
+### Cloudinary
+
+You need to have Cloudinary credentials.
+This can be disabled using CLOUDINARY_ENABLED=false in `config/application.yml` but logos won't
+work :(
+
 ### Installation
 
 ```
 $ bundle install
 $ cp config/application.yml.sample config/application.yml
-$ rake db:migrate
-$ rake db:seed
+$ bundle exec rake db:create db:schema:load db:seed
 ```
+
+Depending on your system, and since gemsavvy uses bundler, you may need to use the bundler version
+used by the app to run bundled commands.
+Just use `bundle _1.12.5_ the-command`.
 
 ### Usage
 
 Just launch the Rails app and Sidekiq.
 
 ```
-$ foreman start
+$ bundle exec foreman start
 ```
 
 ## Contributing
